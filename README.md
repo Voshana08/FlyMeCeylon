@@ -1,6 +1,6 @@
 # Flyme Ceylon
 
-Docs and, eventually, code for Flyme Ceylon's booking platform — a scenic flight tour company based in Sri Lanka.
+Docs and, eventually, code for Flyme Ceylon's booking platform, a scenic flight tour company based in Sri Lanka.
 
 ## Where this is at
 
@@ -44,7 +44,7 @@ Flyme Ceylon runs scenic flight tours over Colombo, Sri Pada (Adam's Peak), the 
 
 ## Planned stack
 
-Nothing's locked in yet, but the direction is React on the frontend with a REST API backend, a payment gateway that works for international tourist cards, and some form of digital ticket or wallet pass on booking confirmation. Final calls depend on the discovery conversation with the founder.
+The tech stack is to be decided, but the direction is React on the frontend with a REST API backend, a payment gateway that works for international tourist cards, and some form of digital ticket on booking confirmation. Final calls depend on the discovery conversation with the founder.
 
 ## Next up
 
