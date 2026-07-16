@@ -4,13 +4,39 @@ Docs and, eventually, code for Flyme Ceylon's booking platform — a scenic flig
 
 ## Where this is at
 
-Right now this repo is all planning, not product. I've gone through the founder's original project brief, written up a proper requirements document, and mapped out the full build in phases. No code yet. That starts once scope is locked with the client.
+Planning is done, and there's now a first code skeleton: a React frontend and a Python (FastAPI) backend that can talk to each other. Nothing real is built yet, this is just proof that the two sides connect, before actual features get layered on. Real feature scope still depends on locking things down with the client.
 
 ## What's here
 
 - `Flyme_Ceylon_BRD.pdf` — the business requirements document. Covers the client's business model, what they've asked for, gaps in the original brief (there was no admin system in it, for one), open questions still needing answers, and the proposed MVP scope.
 - `Flyme_Ceylon_Project_Roadmap.md` — every task from discovery through launch, broken into phases.
 - `Flyme_Ceylon_Trello_Import.csv` — the same task list, formatted to drop into a Trello board.
+- `frontend/` — the React app (JavaScript, built with Vite).
+- `backend/` — the Python API (FastAPI).
+
+## Running this locally
+
+You'll need Node.js and Python 3 installed.
+
+**Backend:**
+```
+cd backend
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+```
+This starts the API at `http://127.0.0.1:8000`. Visit that URL directly in a browser, you should see `{"status":"Flyme Ceylon API is running"}`.
+
+**Frontend** (in a second terminal tab, backend needs to stay running):
+```
+cd frontend
+npm install
+npm run dev
+```
+This prints a local URL, usually `http://localhost:5173`. Open it, and the page should say "Backend says: Hello from the Python backend" — meaning the two sides successfully talked to each other.
+
+Note: if `frontend/node_modules` already exists and `npm run dev` misbehaves, delete that folder first and re-run `npm install`. It was generated inside a sandboxed environment while building this out and may not be clean.
 
 ## The project, briefly
 
